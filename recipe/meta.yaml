@@ -1,5 +1,5 @@
 {% set name = "uvicore" %}
-{% set version = "0.1.23" %}
+{% set version = "0.1.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/uvicore-{{ version }}.tar.gz
-  sha256: 1cb3ba1949dc5341ae04cf04379699e4b73afc49dbf17098ecd67aee200bb45b
+  sha256: 84d4a10f3f97d77f9bbb6cd217e1c437541c187d57977bf4cbb1bc850eff098a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
