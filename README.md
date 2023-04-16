@@ -1,11 +1,11 @@
-About uvicore
-=============
+About uvicore-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/uvicore-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/uvicore/framework
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/uvicore-feedstock/blob/main/LICENSE.txt)
 
 Summary: The Async Python Framework for Artisans. An Elegant Fullstack Python Web, API and CLI Framework
 
