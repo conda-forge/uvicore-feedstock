@@ -30,7 +30,7 @@ requirements:
     - merge-args >=0.1.0,<0.2.0
     - prettyprinter >=0.18.0,<0.19.0
     - python >=3.7,<4.0
-    - pydantic
+    - pydantic >=1.10.0,<1.11.0
 
 test:
   imports:
