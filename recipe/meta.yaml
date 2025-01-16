@@ -12,12 +12,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
   run:
     - aiohttp 3.9.*
@@ -29,7 +29,7 @@ requirements:
     - httpx 0.26.*
     - merge-args 0.1.*
     - prettyprinter 0.18.*
-    - python >=3.7,<4.0
+    - python >={{ python_min }},<4.0
     - pydantic 1.10.*
 
 test:
@@ -39,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/uvicore/framework
