@@ -1,5 +1,6 @@
 {% set name = "uvicore" %}
-{% set version = "0.2.8" %}
+{% set version = "0.3.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/uvicore-{{ version }}.tar.gz
-  sha256: c73dca04a14808f79bdfb0ebcb4297d211f695b6a5f7bf4f3a9dc0bcdc7e8b6a
+  sha256: 8306eb513de99673dc9570c328042c3bce67fe3c232ef797cdd7056878d67523
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,17 +21,17 @@ requirements:
     - python {{ python_min }}
     - poetry-core >=1.0.0
   run:
-    - aiohttp 3.9.*
-    - anyio 4.3.*
-    - argon2-cffi 23.1.*
-    - colored 2.2.*
-    - cryptography 42.0.*
-    - environs 10.3.*
-    - httpx 0.26.*
-    - merge-args 0.1.*
-    - prettyprinter 0.18.*
+    - aiohttp ==3.11.*
+    - anyio ==4.8.*
+    - argon2-cffi ==23.1.*
+    - colored ==2.2.*
+    - cryptography ==44.0.*
+    - environs ==14.1.*
+    - httpx ==0.26.*
+    - merge-args ==0.1.*
+    - prettyprinter ==0.18.*
     - python >={{ python_min }},<4.0
-    - pydantic 1.10.*
+    - pydantic ==1.10.*
 
 test:
   imports:
