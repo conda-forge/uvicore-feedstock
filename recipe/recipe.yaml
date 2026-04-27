@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  name: uvicore
+  version: "0.3.16"
+  python_min: "3.10"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/uvicore-${{ version }}.tar.gz
+  sha256: cd3130db60983be6243e722503861b8ca25dd987014e2e8e4221552e6ef1217a
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - pip
+    - python 3.10.*
+    - poetry-core >=1.0.0
+  run:
+    - jinja2 ==3.1.5
+    - aiohttp ==3.11
+    - anyio ==4.8
+    - argon2-cffi ==23.1
+    - colored ==2.2
+    - cryptography ==44.0
+    - environs ==14.1
+    - httpx ==0.26
+    - merge-args ==0.1
+    - prettyprinter ==0.18
+    - python >=${{ python_min }},<4.0
+    - pydantic ==1.10
+
+tests:
+  - python:
+      imports:
+        - uvicore
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: The Async Python Framework for Artisans. An Elegant Fullstack Python Web, API and CLI Framework
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/uvicore/framework
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
