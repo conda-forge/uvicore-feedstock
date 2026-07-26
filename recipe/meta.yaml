@@ -1,5 +1,5 @@
 {% set name = "uvicore" %}
-{% set version = "0.4.8" %}
+{% set version = "0.4.9" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/uvicore-{{ version }}.tar.gz
-  sha256: eedeb73c32fdd05ae9cae4355d3bdc156e635c79c483023dac4cc02e5f2fc624
+  sha256: 0c3a7f89e7a2324c81cf28d77a516695ca5135e33fb24972c187ef9211cb73a8
 
 build:
   noarch: python
@@ -21,6 +21,9 @@ requirements:
     - python {{ python_min }}
     - poetry-core >=1.0.0
   run:
+    - markdown-it-py ==4.2.0
+    - mdurl ==0.1.2
+    - rich ==14.2.0
     - annotated-types ==0.7.0
     - argon2-cffi-bindings ==25.1.0
     - certifi ==2026.6.17
