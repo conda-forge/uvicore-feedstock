@@ -1,5 +1,5 @@
 {% set name = "uvicore" %}
-{% set version = "0.4.11" %}
+{% set version = "0.4.13" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/uvicore-{{ version }}.tar.gz
-  sha256: b61e74ab2e941a4c8aed6349a98da4b4b23b9193c7cf1cd4ad3b3e77e19b7cb4
+  sha256: dc16cb342b13da6012d242970c8b757fcef60baa288b8d4b6fe93013016ce3c9
 
 build:
   noarch: python
@@ -23,36 +23,36 @@ requirements:
   run:
     - markdown-it-py ==4.2.0
     - mdurl ==0.1.2
-    - rich ==14.2.0
-    - annotated-types ==0.7.0
-    - argon2-cffi-bindings ==25.1.0
-    - certifi ==2026.6.17
-    - cffi ==2.0.0
+    - rich ==15.0.0
+    - annotated-types ==0.8.0
+    - argon2-cffi-bindings ==26.1.0
+    - certifi ==2026.10.23
+    - cffi ==2.1.1
     - colorful ==0.5.8
     - exceptiongroup ==1.3.1
     - h11 ==0.16.0
     - httpcore ==1.0.9
-    - idna ==3.18
-    - markupsafe ==3.0.3
-    - marshmallow ==4.3.0
-    - pycparser ==3.0
-    - pydantic-core ==2.46.4
-    - pygments ==2.20.0
-    - python-dotenv ==1.2.2
-    - typing-inspection ==0.4.2
-    - typing_extensions ==4.15.0
+    - idna ==3.20
+    - markupsafe ==3.0.4
+    - marshmallow ==4.3.1
+    - pycparser ==3.12
+    - pydantic-core ==2.50.1
+    - pygments ==2.21.0
+    - python-dotenv ==1.2.4
+    - typing-inspection ==0.4.4
+    - typing_extensions ==4.16.0
     - jinja2 ==3.1.6
     - aiohttp ==3.11.*
-    - anyio ==4.14.0
+    - anyio ==4.15.1
     - argon2-cffi ==25.1.0
     - colored ==2.3.2
-    - cryptography ==49.0.0
-    - environs ==15.0.1
+    - cryptography ==50.0.2
+    - environs ==15.2.0
     - httpx ==0.28.1
     - merge-args ==0.1.5
     - prettyprinter ==0.18.0
     - python >={{ python_min }},<4.0
-    - pydantic ==2.13.4
+    - pydantic ==2.14.1
 
 test:
   imports:
